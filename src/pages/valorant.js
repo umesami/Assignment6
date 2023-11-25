@@ -11,14 +11,14 @@ export default function Information(name){
     return(
         <div>
             <h1>Here are all the Valorant Agents currently released:</h1>
+            <table className='td' key={agentName.uuid}>
             {agentName.map((agent) => (
-                <table className='td' key={agent.uuid}>
                     <tbody>
                         <td className='td'>{agent.displayName}</td>
                         <td className='td'>Description: {agent.description}</td>
                     </tbody>
-                </table>
             ))}
+            </table>
         </div>
     )
 }
